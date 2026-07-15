@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: >-
+  If you use this data or code in a research article or other publication,
+  please cite it as below.
+title: ForeignExchangeData
+type: dataset
+authors:
+  - name: Daan Zunnenberg
+url: "https://github.com/DaanZunnenberg/ForeignExchangeData"
+license: CC0-1.0
+date-released: 2026-07-15
+abstract: >-
+  EUR/USD OHLCV data, 2-minute bars, for 2025 (January-December), provided
+  as a test/sandbox dataset for experimenting with FX data, trading
+  strategies, backtests, and analysis techniques.

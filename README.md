@@ -4,6 +4,10 @@ EUR/USD Open, High, Low, Close, Volume (OHLCV) data, 2-minute bars, for 2025 (Ja
 
 > **This is a test/sandbox repository.** It exists purely for people to play around with sample FX data and try out trading strategies, backtests, and analysis techniques. The data is provided as-is with no guarantees of accuracy or completeness — do not use it for real trading decisions. No rights reserved: use, copy, modify, and share this data and code freely for any purpose.
 
+## Citation
+
+If you use this data or code in a research article or other publication, please cite it — see [`CITATION.cff`](CITATION.cff).
+
 ## Structure
 
 - `data/eurusd_2m_2025-MM.csv` — one file per month, 2-minute interval bars.
