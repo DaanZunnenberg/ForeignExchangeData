@@ -1,0 +1,15 @@
+CC0 1.0 Universal (Public Domain Dedication)
+
+This repository is a test/sandbox project. Its data and code are provided
+purely for people to experiment with sample FX data and test trading
+strategies, backtests, and analysis techniques.
+
+No rights reserved. To the extent possible under law, the author(s) have
+dedicated all copyright and related and neighboring rights to this work to
+the public domain worldwide. You can copy, modify, distribute, and use this
+work, even for commercial purposes, all without asking permission.
+
+The data is provided "as-is" with no guarantees of accuracy or completeness.
+Do not use it for real trading decisions.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/
