@@ -2,8 +2,6 @@
 
 EUR/USD OHLCV data, 2-minute bars, for 2025 (January–December).
 
-Sourced from [sanderfillet/eur_usd](https://github.com/sanderfillet/eur_usd).
-
 ## Files
 
 - `EURUSDT_2T_2025-MM.csv` — one file per month, 2-minute interval bars.
