@@ -1,6 +1,6 @@
 # ForeignExchangeData
 
-EUR/USD OHLCV data, 2-minute bars, for 2025 (January–December).
+EUR/USD Open, High, Low, Close, Volume (OHLCV) data, 2-minute bars, for 2025 (January–December).
 
 ## Structure
 
