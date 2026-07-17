@@ -32,8 +32,11 @@ def load_month(month: str) -> pd.DataFrame:
 
 def load_months(months: list[str]) -> pd.DataFrame:
     """Load and combine multiple months into a single sorted DataFrame."""
+    if not months:
+        raise ValueError("load_months requires at least one month")
     frames = [load_month(m) for m in months]
-    return pd.concat(frames).sort_index()
+    df = pd.concat(frames).sort_index()
+    return df[~df.index.duplicated(keep="first")]
 
 
 def load_all() -> pd.DataFrame:
@@ -43,4 +46,5 @@ def load_all() -> pd.DataFrame:
 
 def resample(df: pd.DataFrame, rule: str) -> pd.DataFrame:
     """Resample OHLCV data to a new bar interval, e.g. '5min', '1h', '1D'."""
-    return df.resample(rule).agg(OHLC_AGG).dropna(how="all")
+    agg = {col: how for col, how in OHLC_AGG.items() if col in df.columns}
+    return df.resample(rule).agg(agg).dropna(how="all")
