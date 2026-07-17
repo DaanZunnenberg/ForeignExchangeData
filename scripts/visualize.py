@@ -21,15 +21,23 @@ def plot(df, title: str) -> None:
     fig, (ax_price, ax_volume) = plt.subplots(
         2, 1, sharex=True, figsize=(12, 6), gridspec_kw={"height_ratios": [3, 1]}
     )
-    ax_price.plot(df.index, df["close"], linewidth=0.8)
-    ax_price.set_ylabel("Close price")
-    ax_price.set_title(title)
 
-    ax_volume.bar(df.index, df["volume"])
+    ax_price.plot(df.index, df["close"], linewidth=0.9, color="tab:blue", label="Close")
+    if "high" in df.columns and "low" in df.columns:
+        ax_price.fill_between(df.index, df["low"], df["high"], color="tab:blue", alpha=0.15, label="High/Low range")
+        ax_price.legend(loc="upper left")
+    ax_price.set_ylabel("Price")
+    ax_price.set_title(title)
+    ax_price.grid(True, alpha=0.3)
+
+    colors = ["tab:green" if c >= o else "tab:red" for o, c in zip(df["open"], df["close"])] if "open" in df.columns else "tab:gray"
+    ax_volume.bar(df.index, df["volume"], color=colors, width=1.0)
     ax_volume.set_yscale("log")
     ax_volume.set_ylabel("Volume (log)")
     ax_volume.set_xlabel("Datetime")
+    ax_volume.grid(True, alpha=0.3)
 
+    fig.autofmt_xdate()
     fig.tight_layout()
     plt.show()
 
